@@ -11,7 +11,7 @@ typealias ImageArrayData = NSArray
 struct LFMConstants  {
     
     /*
-     Constants and Utils are always better as nested types 
+     Constants and Utils are always better as nested types
      */
     
     struct LFMAPIKeys {
