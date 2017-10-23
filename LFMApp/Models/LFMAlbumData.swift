@@ -18,7 +18,10 @@ class LFMAlbumData<NameData , ArtistData, URLData , GENERICData>: NSObject{
     var genericData: GENERICData?
     var imageURL: String?
     var image: UIImage?
-    
+
+    var serviceManager  = LFMServiceManager()
+    weak var imageDownloadlistener:ImageDownloadedListenerProtocol?
+
     
     init?(_ dictionary: [String:AnyObject]?){
         guard let dictionary = dictionary,
@@ -35,12 +38,38 @@ class LFMAlbumData<NameData , ArtistData, URLData , GENERICData>: NSObject{
         self.artist =  artist
         self.imageURL = img_URL
         //TODO: DownloadImage Method will be added
-        //self.downloadImage()
+        self.downloadImage()
         // self.genericData = generic
+        self.url = artist
     }
     
  
-   
+    var downloadedImage: UIImage? {
+        get {
+            
+            if image == nil {
+                downloadImage()
+            }
+            
+            return image
+        }
+    }
+    
+    func downloadImage() -> Void {
+        //TODO: I shuld maybe work on the method name as we arefetching a single image and not albums
+        
+        serviceManager.fetchAlbums(urlString: self.imageURL,
+                                   success: { (data) in
+                                    self.image = UIImage(data: data)
+                                    self.imageDownloadlistener?.imageDownloaded()
+        }, failure: { (error) in
+            // do nothing.
+        })
+    }
+    
+
+    
+    
     
 }
 

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-private let LFMSearchTableViewCell = "LFMTableViewCell"
+private let LFMCell = "LFMTableViewCellIdentifier"
 class LFMSearchTableViewController: UITableViewController {
     
     var viewModel: LFMSearchTableViewViewModel?
@@ -61,7 +61,7 @@ class LFMSearchTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier:LFMSearchTableViewCell, for: indexPath) as? LFMTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier:LFMCell, for: indexPath) as? LFMTableViewCell
         
         guard let viewModel = viewModel,
             let lfmTableViewCell = cell else {

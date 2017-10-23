@@ -40,7 +40,6 @@ class LFMSearchTableViewViewModel: NSObject {
         
     }
     
-    
     func initialViewSetup() {}
     
     
@@ -51,10 +50,24 @@ class LFMSearchTableViewViewModel: NSObject {
             
         }
         //TODO: Will add Service Call here
-       // self.getAlbums()
+        self.getAlbums()
     }
     
  
+    func getAlbums() {
+        self.album?.loadAlbums(urlString:  LFMConstants.LFMAPIServiceURLS.ALBUM_SEARCH_URL  ,
+                               
+                               success : { () in
+                                DispatchQueue.main.async {
+                                    self.view?.reloadTableView()
+                                }
+        },
+                               failure: { (error) in
+                                print(error.description)
+        })
+    }
+
+    
     
     func numberOfSections() -> Int {
         guard let _ = album,

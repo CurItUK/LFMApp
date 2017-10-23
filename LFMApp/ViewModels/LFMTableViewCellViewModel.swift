@@ -12,7 +12,7 @@ class LFMTableViewCellViewModel : NSObject {
     
     weak var model:LFMAlbumData<String, String , String, String>?
     var view :LFMTableViewCellProtocol?
-   
+    fileprivate var _image: UIImage?
     init?(model:LFMAlbumData<String, String , String, String>?) {
         guard let model = model else {
             return nil
@@ -20,21 +20,23 @@ class LFMTableViewCellViewModel : NSObject {
         
         super.init()
         self.model = model
-       // model.imageDownloadlistener = self
+        model.imageDownloadlistener = self
     }
     //TODO: View and image are not there yet, _ names added to remove warnings
     func setup() {
-        guard let _ = view ,
+        guard let view = view ,
             let model = model,
             let name = model.name,
             let artist = model.artist,
-            let _ = model.image else {
+            let image = model.image else {
                 // let url  = model.url   else {
                 return
         }
         self.setName(name)
         self.setArtist(artist)
         self.setURL(artist)
+        view.setImage(img: model.downloadedImage)
+        _image = image
     }
     /*
      Seding the data to the view making it loosely coupled via protocols
@@ -72,6 +74,13 @@ class LFMTableViewCellViewModel : NSObject {
     
 }
 
+extension LFMTableViewCellViewModel : ImageDownloadedListenerProtocol {
+    func imageDownloaded () -> Void {
+        DispatchQueue.main.async {
+            self.view?.setImage (img: self.model?.downloadedImage )
+        }
+    }
+}
 
 
 

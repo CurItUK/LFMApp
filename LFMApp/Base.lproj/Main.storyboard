@@ -12,13 +12,13 @@
         <!--Search Here-->
         <scene sceneID="BrC-5J-RLR">
             <objects>
-                <tableViewController title="Search Here" id="16i-WW-O4K" customClass="LFMSearchTableTableViewController" customModule="LFMApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Search Here" id="16i-WW-O4K" customClass="LFMSearchTableViewController" customModule="LFMApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" sectionHeaderHeight="28" sectionFooterHeight="28" id="X3c-Tf-iaG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LFMTableViewCell" rowHeight="125" id="Txx-Mr-vdT" userLabel="LBSearchViewCell" customClass="LFMTableViewCell" customModule="LFMApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LFMTableViewCellIdentifier" rowHeight="125" id="Txx-Mr-vdT" userLabel="LBSearchViewCell" customClass="LFMTableViewCell" customModule="LFMApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Txx-Mr-vdT" id="Rpb-6I-iiZ">

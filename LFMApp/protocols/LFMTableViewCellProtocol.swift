@@ -14,5 +14,6 @@ protocol LFMTableViewCellProtocol {
     func setArtist(_ artist:String)
     func setURL(_ url:String)
     func setImage(img: UIImage? )
+    func setGen(_ generic: String)
     
 }

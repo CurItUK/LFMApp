@@ -31,18 +31,12 @@ class LFMTableViewCell: UITableViewCell {
     func setup() {
         viewModel?.setup()
     }
-    
-}
-
-
-extension LFMTableViewCell : LFMTableViewCellProtocol  {
-    
     func setName(_ songName:String) {
         
         self.songName.text = songName
         
     }
-    func setGeneric(_ generic:String){
+    func setGen(_ generic:String){
         
         //self.generic.text =  generic
     }
@@ -65,6 +59,16 @@ extension LFMTableViewCell : LFMTableViewCellProtocol  {
     }
     
     
+}
+
+extension LFMTableViewCell : LFMTableViewCellProtocol  {
+   
+    
+    
+    
+    
     
     
 }
+
+

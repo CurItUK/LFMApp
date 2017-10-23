@@ -43,3 +43,37 @@ extension LFMAlbumTests {
     
 }
 
+
+//MARk: Load Tests
+extension LFMAlbumTests {
+    
+    
+    func test_Load_whenURLisnil_ReturnsError_Code101() {
+        
+        let expectation = self.expectation(description: "Returns Error Code= 101")
+        
+        let sut = LFMAlbum()
+        sut.loadAlbums(urlString: nil,
+                       
+                       success: { (Void) in
+                        
+        },
+                       failure: { (error) in
+                        
+                        if error.code == 101 {
+                            expectation.fulfill()
+                        }
+        })
+        
+        self.waitForExpectations(timeout: 1.0, handler: nil)
+    }
+    
+    
+    
+    
+}
+
+
+
+
+
