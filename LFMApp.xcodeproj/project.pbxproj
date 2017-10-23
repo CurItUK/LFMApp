@@ -19,6 +19,14 @@
 		6005CB9E1F9D439000C8A311 /* LFMAlbumData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CB9D1F9D439000C8A311 /* LFMAlbumData.swift */; };
 		6005CBA01F9D461600C8A311 /* LFMAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CB9F1F9D461600C8A311 /* LFMAlbum.swift */; };
 		6005CBA21F9D476E00C8A311 /* LFMAlbumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBA11F9D476E00C8A311 /* LFMAlbumTests.swift */; };
+		6005CBA41F9D4E4000C8A311 /* LFMSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBA31F9D4E4000C8A311 /* LFMSearchTableViewController.swift */; };
+		6005CBA61F9D4F2C00C8A311 /* LFMTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBA51F9D4F2C00C8A311 /* LFMTableViewCell.swift */; };
+		6005CBA81F9D501000C8A311 /* LFMTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBA71F9D501000C8A311 /* LFMTableViewCellProtocol.swift */; };
+		6005CBAA1F9D550A00C8A311 /* LFMSearchTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBA91F9D550A00C8A311 /* LFMSearchTableViewViewModel.swift */; };
+		6005CBAC1F9D564500C8A311 /* LFMSearchTableViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBAB1F9D564500C8A311 /* LFMSearchTableViewControllerProtocol.swift */; };
+		6005CBAE1F9D658700C8A311 /* LFMTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBAD1F9D658700C8A311 /* LFMTableViewCellViewModel.swift */; };
+		6005CBB01F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBAF1F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift */; };
+		6005CBB21F9D692D00C8A311 /* MockLFMSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBB11F9D692D00C8A311 /* MockLFMSearchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +65,14 @@
 		6005CB9D1F9D439000C8A311 /* LFMAlbumData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMAlbumData.swift; sourceTree = "<group>"; };
 		6005CB9F1F9D461600C8A311 /* LFMAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMAlbum.swift; sourceTree = "<group>"; };
 		6005CBA11F9D476E00C8A311 /* LFMAlbumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMAlbumTests.swift; sourceTree = "<group>"; };
+		6005CBA31F9D4E4000C8A311 /* LFMSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMSearchTableViewController.swift; sourceTree = "<group>"; };
+		6005CBA51F9D4F2C00C8A311 /* LFMTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMTableViewCell.swift; sourceTree = "<group>"; };
+		6005CBA71F9D501000C8A311 /* LFMTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMTableViewCellProtocol.swift; sourceTree = "<group>"; };
+		6005CBA91F9D550A00C8A311 /* LFMSearchTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMSearchTableViewViewModel.swift; sourceTree = "<group>"; };
+		6005CBAB1F9D564500C8A311 /* LFMSearchTableViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMSearchTableViewControllerProtocol.swift; sourceTree = "<group>"; };
+		6005CBAD1F9D658700C8A311 /* LFMTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		6005CBAF1F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMSearchTableViewViewModelTests.swift; sourceTree = "<group>"; };
+		6005CBB11F9D692D00C8A311 /* MockLFMSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLFMSearchTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +176,8 @@
 		6005CB8B1F9D401000C8A311 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6005CBA31F9D4E4000C8A311 /* LFMSearchTableViewController.swift */,
+				6005CBA51F9D4F2C00C8A311 /* LFMTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +192,8 @@
 		6005CB8D1F9D401E00C8A311 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6005CBA91F9D550A00C8A311 /* LFMSearchTableViewViewModel.swift */,
+				6005CBAD1F9D658700C8A311 /* LFMTableViewCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -181,6 +201,8 @@
 		6005CB8E1F9D402200C8A311 /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				6005CBA71F9D501000C8A311 /* LFMTableViewCellProtocol.swift */,
+				6005CBAB1F9D564500C8A311 /* LFMSearchTableViewControllerProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -195,6 +217,7 @@
 		6005CB901F9D403300C8A311 /* ViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
+				6005CBAF1F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -209,6 +232,7 @@
 		6005CB921F9D404700C8A311 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				6005CBB11F9D692D00C8A311 /* MockLFMSearchTableViewController.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -389,8 +413,14 @@
 				6005CB5F1F9D3FD900C8A311 /* ViewController.swift in Sources */,
 				6005CBA01F9D461600C8A311 /* LFMAlbum.swift in Sources */,
 				6005CB9C1F9D41B900C8A311 /* LFMConstants.swift in Sources */,
+				6005CBAC1F9D564500C8A311 /* LFMSearchTableViewControllerProtocol.swift in Sources */,
 				6005CB5D1F9D3FD900C8A311 /* AppDelegate.swift in Sources */,
+				6005CBA61F9D4F2C00C8A311 /* LFMTableViewCell.swift in Sources */,
+				6005CBA81F9D501000C8A311 /* LFMTableViewCellProtocol.swift in Sources */,
+				6005CBAE1F9D658700C8A311 /* LFMTableViewCellViewModel.swift in Sources */,
+				6005CBAA1F9D550A00C8A311 /* LFMSearchTableViewViewModel.swift in Sources */,
 				6005CB9E1F9D439000C8A311 /* LFMAlbumData.swift in Sources */,
+				6005CBA41F9D4E4000C8A311 /* LFMSearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6005CBB21F9D692D00C8A311 /* MockLFMSearchTableViewController.swift in Sources */,
+				6005CBB01F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift in Sources */,
 				6005CB721F9D3FDA00C8A311 /* LFMAppTests.swift in Sources */,
 				6005CBA21F9D476E00C8A311 /* LFMAlbumTests.swift in Sources */,
 				6005CB9A1F9D412800C8A311 /* LFMAlbumDataTests.swift in Sources */,
