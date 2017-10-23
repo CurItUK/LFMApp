@@ -27,6 +27,11 @@
 		6005CBAE1F9D658700C8A311 /* LFMTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBAD1F9D658700C8A311 /* LFMTableViewCellViewModel.swift */; };
 		6005CBB01F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBAF1F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift */; };
 		6005CBB21F9D692D00C8A311 /* MockLFMSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBB11F9D692D00C8A311 /* MockLFMSearchTableViewController.swift */; };
+		6005CBB51F9D6BDE00C8A311 /* LFMServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBB41F9D6BDE00C8A311 /* LFMServiceManager.swift */; };
+		6005CBB71F9D6C3000C8A311 /* LFMURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBB61F9D6C3000C8A311 /* LFMURLSessionProtocol.swift */; };
+		6005CBB91F9D6D1C00C8A311 /* LFMServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBB81F9D6D1C00C8A311 /* LFMServicesTests.swift */; };
+		6005CBBB1F9D6EC700C8A311 /* MockLFMURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBBA1F9D6EC700C8A311 /* MockLFMURLSession.swift */; };
+		6005CBBD1F9D6F2800C8A311 /* MockLFMURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CBBC1F9D6F2800C8A311 /* MockLFMURLSessionDataTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +78,11 @@
 		6005CBAD1F9D658700C8A311 /* LFMTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		6005CBAF1F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMSearchTableViewViewModelTests.swift; sourceTree = "<group>"; };
 		6005CBB11F9D692D00C8A311 /* MockLFMSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLFMSearchTableViewController.swift; sourceTree = "<group>"; };
+		6005CBB41F9D6BDE00C8A311 /* LFMServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMServiceManager.swift; sourceTree = "<group>"; };
+		6005CBB61F9D6C3000C8A311 /* LFMURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMURLSessionProtocol.swift; sourceTree = "<group>"; };
+		6005CBB81F9D6D1C00C8A311 /* LFMServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMServicesTests.swift; sourceTree = "<group>"; };
+		6005CBBA1F9D6EC700C8A311 /* MockLFMURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLFMURLSession.swift; sourceTree = "<group>"; };
+		6005CBBC1F9D6F2800C8A311 /* MockLFMURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLFMURLSessionDataTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,7 @@
 		6005CB5B1F9D3FD900C8A311 /* LFMApp */ = {
 			isa = PBXGroup;
 			children = (
+				6005CBB31F9D6BCE00C8A311 /* Services */,
 				6005CB971F9D40D400C8A311 /* Models */,
 				6005CB8E1F9D402200C8A311 /* protocols */,
 				6005CB8D1F9D401E00C8A311 /* ViewModels */,
@@ -142,7 +153,7 @@
 			children = (
 				6005CB981F9D40E600C8A311 /* TestData */,
 				6005CB961F9D40CE00C8A311 /* ModelTests */,
-				6005CB941F9D40B600C8A311 /* ServiceTests */,
+				6005CB941F9D40B600C8A311 /* ServicesTests */,
 				6005CB931F9D404B00C8A311 /* ControllerTests */,
 				6005CB921F9D404700C8A311 /* Mocks */,
 				6005CB911F9D403F00C8A311 /* Stubs */,
@@ -203,6 +214,7 @@
 			children = (
 				6005CBA71F9D501000C8A311 /* LFMTableViewCellProtocol.swift */,
 				6005CBAB1F9D564500C8A311 /* LFMSearchTableViewControllerProtocol.swift */,
+				6005CBB61F9D6C3000C8A311 /* LFMURLSessionProtocol.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -233,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				6005CBB11F9D692D00C8A311 /* MockLFMSearchTableViewController.swift */,
+				6005CBBA1F9D6EC700C8A311 /* MockLFMURLSession.swift */,
+				6005CBBC1F9D6F2800C8A311 /* MockLFMURLSessionDataTask.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -244,11 +258,12 @@
 			path = ControllerTests;
 			sourceTree = "<group>";
 		};
-		6005CB941F9D40B600C8A311 /* ServiceTests */ = {
+		6005CB941F9D40B600C8A311 /* ServicesTests */ = {
 			isa = PBXGroup;
 			children = (
+				6005CBB81F9D6D1C00C8A311 /* LFMServicesTests.swift */,
 			);
-			path = ServiceTests;
+			path = ServicesTests;
 			sourceTree = "<group>";
 		};
 		6005CB961F9D40CE00C8A311 /* ModelTests */ = {
@@ -274,6 +289,14 @@
 			children = (
 			);
 			path = TestData;
+			sourceTree = "<group>";
+		};
+		6005CBB31F9D6BCE00C8A311 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6005CBB41F9D6BDE00C8A311 /* LFMServiceManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +434,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6005CB5F1F9D3FD900C8A311 /* ViewController.swift in Sources */,
+				6005CBB51F9D6BDE00C8A311 /* LFMServiceManager.swift in Sources */,
+				6005CBB71F9D6C3000C8A311 /* LFMURLSessionProtocol.swift in Sources */,
 				6005CBA01F9D461600C8A311 /* LFMAlbum.swift in Sources */,
 				6005CB9C1F9D41B900C8A311 /* LFMConstants.swift in Sources */,
 				6005CBAC1F9D564500C8A311 /* LFMSearchTableViewControllerProtocol.swift in Sources */,
@@ -429,8 +454,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6005CBB21F9D692D00C8A311 /* MockLFMSearchTableViewController.swift in Sources */,
+				6005CBB91F9D6D1C00C8A311 /* LFMServicesTests.swift in Sources */,
 				6005CBB01F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift in Sources */,
 				6005CB721F9D3FDA00C8A311 /* LFMAppTests.swift in Sources */,
+				6005CBBD1F9D6F2800C8A311 /* MockLFMURLSessionDataTask.swift in Sources */,
+				6005CBBB1F9D6EC700C8A311 /* MockLFMURLSession.swift in Sources */,
 				6005CBA21F9D476E00C8A311 /* LFMAlbumTests.swift in Sources */,
 				6005CB9A1F9D412800C8A311 /* LFMAlbumDataTests.swift in Sources */,
 			);
