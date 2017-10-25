@@ -24,19 +24,21 @@ class LFMTableViewCellViewModel : NSObject {
     }
     //TODO: View and image are not there yet, _ names added to remove warnings
     func setup() {
+   
         guard let view = view ,
             let model = model,
             let name = model.name,
-            let artist = model.artist,
-            let image = model.image else {
-                // let url  = model.url   else {
+            let artist = model.artist else {
                 return
         }
-        self.setName(name)
-        self.setArtist(artist)
-        self.setURL(artist)
-        view.setImage(img: model.downloadedImage)
-        _image = image
+        view.setName(name)
+        view.setArtist(artist)
+        view.setURL(artist)
+         view.setImage(img: model.downloadedImage)
+       //  _image = image
+        
+  
+        
     }
     /*
      Seding the data to the view making it loosely coupled via protocols

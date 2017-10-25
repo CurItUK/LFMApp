@@ -34,6 +34,7 @@ class LFMTableViewCell: UITableViewCell {
     func setName(_ songName:String) {
         
         self.songName.text = songName
+ 
         
     }
     func setGen(_ generic:String){

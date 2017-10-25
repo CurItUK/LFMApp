@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6005CB5D1F9D3FD900C8A311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CB5C1F9D3FD900C8A311 /* AppDelegate.swift */; };
-		6005CB5F1F9D3FD900C8A311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6005CB5E1F9D3FD900C8A311 /* ViewController.swift */; };
 		6005CB621F9D3FD900C8A311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6005CB601F9D3FD900C8A311 /* Main.storyboard */; };
 		6005CB641F9D3FD900C8A311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6005CB631F9D3FD900C8A311 /* Assets.xcassets */; };
 		6005CB671F9D3FD900C8A311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6005CB651F9D3FD900C8A311 /* LaunchScreen.storyboard */; };
@@ -36,6 +35,8 @@
 		607B842D1F9E9CB600905638 /* MockLFMServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607B842C1F9E9CB600905638 /* MockLFMServiceManager.swift */; };
 		608F4D2C1F9E3FED00FB451E /* ImageDownloadedListenerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608F4D2B1F9E3FED00FB451E /* ImageDownloadedListenerProtocol.swift */; };
 		60C7DAAA1F9E878A00485C7B /* UITableViewStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C7DAA91F9E878A00485C7B /* UITableViewStub.swift */; };
+		60DD92A31F9F8755009E41D2 /* MockLFMTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DD92A21F9F8755009E41D2 /* MockLFMTableViewViewModel.swift */; };
+		60DD92A51F9F89B3009E41D2 /* LFMSearchTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DD92A41F9F89B3009E41D2 /* LFMSearchTableViewControllerTests.swift */; };
 		60F7A61E1F9E5AA6003C44C4 /* LFMTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7A61D1F9E5AA6003C44C4 /* LFMTableViewCellViewModelTests.swift */; };
 		60F7A6201F9E5FC9003C44C4 /* UILabelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7A61F1F9E5FC9003C44C4 /* UILabelStub.swift */; };
 		60F7A6221F9E627E003C44C4 /* MockLFMTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7A6211F9E627E003C44C4 /* MockLFMTableViewCellViewModel.swift */; };
@@ -62,7 +63,6 @@
 /* Begin PBXFileReference section */
 		6005CB591F9D3FD900C8A311 /* LFMApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LFMApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6005CB5C1F9D3FD900C8A311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6005CB5E1F9D3FD900C8A311 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6005CB611F9D3FD900C8A311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6005CB631F9D3FD900C8A311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6005CB661F9D3FD900C8A311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,6 +95,8 @@
 		607B842C1F9E9CB600905638 /* MockLFMServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLFMServiceManager.swift; sourceTree = "<group>"; };
 		608F4D2B1F9E3FED00FB451E /* ImageDownloadedListenerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadedListenerProtocol.swift; sourceTree = "<group>"; };
 		60C7DAA91F9E878A00485C7B /* UITableViewStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewStub.swift; sourceTree = "<group>"; };
+		60DD92A21F9F8755009E41D2 /* MockLFMTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLFMTableViewViewModel.swift; sourceTree = "<group>"; };
+		60DD92A41F9F89B3009E41D2 /* LFMSearchTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMSearchTableViewControllerTests.swift; sourceTree = "<group>"; };
 		60F7A61D1F9E5AA6003C44C4 /* LFMTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFMTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		60F7A61F1F9E5FC9003C44C4 /* UILabelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelStub.swift; sourceTree = "<group>"; };
 		60F7A6211F9E627E003C44C4 /* MockLFMTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLFMTableViewCellViewModel.swift; sourceTree = "<group>"; };
@@ -153,11 +155,9 @@
 				6005CB971F9D40D400C8A311 /* Models */,
 				6005CB8E1F9D402200C8A311 /* protocols */,
 				6005CB8D1F9D401E00C8A311 /* ViewModels */,
-				6005CB8C1F9D401900C8A311 /* Controllers */,
 				6005CB8B1F9D401000C8A311 /* Views */,
 				6005CB8A1F9D3FE300C8A311 /* supporting files  */,
 				6005CB601F9D3FD900C8A311 /* Main.storyboard */,
-				6005CB5E1F9D3FD900C8A311 /* ViewController.swift */,
 				6005CB681F9D3FD900C8A311 /* Info.plist */,
 				6005CB9B1F9D41B900C8A311 /* LFMConstants.swift */,
 			);
@@ -208,13 +208,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6005CB8C1F9D401900C8A311 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		6005CB8D1F9D401E00C8A311 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +231,7 @@
 		6005CB8F1F9D402B00C8A311 /* ViewTests */ = {
 			isa = PBXGroup;
 			children = (
+				60DD92A41F9F89B3009E41D2 /* LFMSearchTableViewControllerTests.swift */,
 			);
 			path = ViewTests;
 			sourceTree = "<group>";
@@ -269,6 +263,7 @@
 				60F7A6211F9E627E003C44C4 /* MockLFMTableViewCellViewModel.swift */,
 				60F7A6231F9E6319003C44C4 /* MockLFMTableViewCell.swift */,
 				607B842C1F9E9CB600905638 /* MockLFMServiceManager.swift */,
+				60DD92A21F9F8755009E41D2 /* MockLFMTableViewViewModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -450,7 +445,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6005CB5F1F9D3FD900C8A311 /* ViewController.swift in Sources */,
 				6005CBB51F9D6BDE00C8A311 /* LFMServiceManager.swift in Sources */,
 				6005CBB71F9D6C3000C8A311 /* LFMURLSessionProtocol.swift in Sources */,
 				6005CBA01F9D461600C8A311 /* LFMAlbum.swift in Sources */,
@@ -472,10 +466,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6005CBB21F9D692D00C8A311 /* MockLFMSearchTableViewController.swift in Sources */,
+				60DD92A51F9F89B3009E41D2 /* LFMSearchTableViewControllerTests.swift in Sources */,
 				6005CBB91F9D6D1C00C8A311 /* LFMServicesTests.swift in Sources */,
 				6005CBB01F9D68C800C8A311 /* LFMSearchTableViewViewModelTests.swift in Sources */,
 				60F7A6221F9E627E003C44C4 /* MockLFMTableViewCellViewModel.swift in Sources */,
 				6005CB721F9D3FDA00C8A311 /* LFMAppTests.swift in Sources */,
+				60DD92A31F9F8755009E41D2 /* MockLFMTableViewViewModel.swift in Sources */,
 				60C7DAAA1F9E878A00485C7B /* UITableViewStub.swift in Sources */,
 				60F7A6241F9E6319003C44C4 /* MockLFMTableViewCell.swift in Sources */,
 				6005CBBD1F9D6F2800C8A311 /* MockLFMURLSessionDataTask.swift in Sources */,

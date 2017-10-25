@@ -37,8 +37,7 @@ class LFMAlbumData<NameData , ArtistData, URLData , GENERICData>: NSObject{
         self.name   = name
         self.artist =  artist
         self.imageURL = img_URL
-        //TODO: DownloadImage Method will be added
-        self.downloadImage()
+      //  self.downloadImage()
         // self.genericData = generic
         self.url = artist
     }
@@ -55,8 +54,9 @@ class LFMAlbumData<NameData , ArtistData, URLData , GENERICData>: NSObject{
         }
     }
     
+    
     func downloadImage() -> Void {
-        //TODO: I shuld maybe work on the method name as we arefetching a single image and not albums
+        
         
         serviceManager.fetchAlbums(urlString: self.imageURL,
                                    success: { (data) in

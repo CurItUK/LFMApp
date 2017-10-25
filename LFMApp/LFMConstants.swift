@@ -29,10 +29,9 @@ struct LFMConstants  {
         // Its more descriptive to use keys and less error prone
         // TODO: These keys will be amended later on...
         static let ALBUM_SEARCH_URL   = "http://ws.audioscrobbler.com/2.0/?method=album.search&album=believe&api_key=9fce79d4d0ec20fd1c05a50f34515ef8&format=json"
+        static let ALBUM_BASE_URL = "http://ws.audioscrobbler.com/2.0/?method=album.search&album="
+        static let ALBUM_TAIL_URL = "&api_key=9fce79d4d0ec20fd1c05a50f34515ef8&format=json"
     }
-    
-    
-    
     
     
     

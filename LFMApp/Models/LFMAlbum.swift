@@ -26,10 +26,13 @@ class LFMAlbum: NSObject {
     func loadAlbums(urlString:String?,
                     success:@escaping (Void) -> Void,
                     failure:@escaping (NSError) -> Void) -> Void {
+        //self.albums?.removeAll()
         albumServiceManager.fetchAlbums(urlString: urlString,
                                         
                                         success: { (receivedData) in
-                                            if let array = try? JSONSerialization.jsonObject(with: receivedData, options:  JSONSerialization.ReadingOptions.allowFragments){
+                                           // if let array = try? JSONSerialization.jsonObject(with: receivedData, options:  JSONSerialization.ReadingOptions.allowFragments){
+                                            if let array = try? JSONSerialization.jsonObject(with: receivedData   ){
+                                                
                                                 if let __albums = ((array as! NSDictionary).object (forKey : "results") as? NSDictionary ) {
                                                     let ldic = __albums["albummatches"]  as? NSDictionary
                                                     
@@ -38,9 +41,12 @@ class LFMAlbum: NSObject {
                                                         guard iitem is NSDictionary else {
                                                             continue
                                                         }
+                                                        
                                                         self.albums?.append(LFMAlbumData(iitem as? [String:AnyObject])!)
-                                                        success(())                                            }
-                                                    
+                                                       
+                                                        
+                                                    }
+                                                     success(())
                                                     
                                                 }else {
                                                     
@@ -57,7 +63,5 @@ class LFMAlbum: NSObject {
         
     }
 }
-
- 
 
 

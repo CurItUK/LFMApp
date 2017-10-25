@@ -10,18 +10,39 @@ import Foundation
 import UIKit
 
 private let LFMCell = "LFMTableViewCellIdentifier"
-class LFMSearchTableViewController: UITableViewController {
+class LFMSearchTableViewController: UITableViewController , UITextFieldDelegate{
     
     var viewModel: LFMSearchTableViewViewModel?
+    
+    var searchText: String?  {
+        didSet {
+            
+          
+            self.searchForAlbums()
+        }
+    }
+    
+    @IBOutlet weak var searchField: UITextField!{
+        didSet {
+            searchField.delegate = self
+            searchField.text = searchText
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         
+        //tableView.reloadData()
+        // TODO : A navigation title method will be added
         if self.viewModel == nil {
-            self.viewModel = LFMSearchTableViewViewModel(view: self)
+            self.viewModel = LFMSearchTableViewViewModel(view: self )
         }
         
+       
         self.viewModel?.initialViewSetup()
         
     }
@@ -49,6 +70,16 @@ class LFMSearchTableViewController: UITableViewController {
         return viewModel.numberOfRowsInSection(section)
     }
     
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        searchText = textField.text
+        return true
+    }
+    
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         guard self.viewModel != nil else {
             return
@@ -56,6 +87,17 @@ class LFMSearchTableViewController: UITableViewController {
         
         self.viewModel?.viewDidAppear()
         
+    }
+    
+    //TODO: A good place for this method is an extension
+    func searchForAlbums() {
+      guard let viewModel = self.viewModel else {
+       return
+      }
+        tableView.reloadData()
+        
+        return viewModel.searchForAlbums(self.searchText)
+    
     }
     
     
@@ -71,23 +113,26 @@ class LFMSearchTableViewController: UITableViewController {
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         cellViewModel?.view = lfmTableViewCell
         //TODO: This method questionable
-        lfmTableViewCell.viewModel = cellViewModel
-        lfmTableViewCell.setup()
+         lfmTableViewCell.viewModel = cellViewModel
+         lfmTableViewCell.setup()
         
         
         
         return lfmTableViewCell
         
     }
+    
+    func reloadTableView() -> Void {
+   
+        self.tableView?.reloadData()
+    }
+    
 }
 
 
 extension LFMSearchTableViewController: LFMSearchTableViewControllerProtocol {
     
-    func reloadTableView() -> Void {
-        self.tableView?.reloadData()
-    }
-    
+
     
 }
 

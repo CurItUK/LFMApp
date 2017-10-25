@@ -30,13 +30,17 @@ class LFMSearchTableViewViewModel: NSObject {
      collection vew instead of the controller itself.This creates a loosely coupled
      relationship between viewmodel and view.
      */
-    init(view: LFMSearchTableViewControllerProtocol) {
+    init(view: LFMSearchTableViewControllerProtocol , album: LFMAlbum? = nil) {
         super.init()
         self.view = view
         
-        if album == nil {
-            album = LFMAlbum()
-        }
+     //   if album == nil {
+      //      album = LFMAlbum()
+       // }
+     
+        
+        self.album = album ?? LFMAlbum()
+       // setNavigationTitle(title)
         
     }
     
@@ -45,12 +49,12 @@ class LFMSearchTableViewViewModel: NSObject {
     
     func viewDidAppear() {
         //  super.viewWillAppear(animated)
-        guard album != nil else  {
+         guard album != nil else  {
             return
             
-        }
+         }
         //TODO: Will add Service Call here
-        self.getAlbums()
+         self.getAlbums()
     }
     
  
@@ -60,6 +64,8 @@ class LFMSearchTableViewViewModel: NSObject {
                                success : { () in
                                 DispatchQueue.main.async {
                                     self.view?.reloadTableView()
+ 
+                                    
                                 }
         },
                                failure: { (error) in
@@ -67,6 +73,26 @@ class LFMSearchTableViewViewModel: NSObject {
         })
     }
 
+    
+    
+    //TODO: We need  a proper search Validator for the text here
+    func searchForAlbums(_ enteredtext: String? ) {
+        
+        guard let _ = enteredtext  else  { return }
+        
+        let  str = "\(LFMConstants.LFMAPIServiceURLS.ALBUM_BASE_URL)\(String(describing: enteredtext!))\(LFMConstants.LFMAPIServiceURLS.ALBUM_TAIL_URL)"
+       
+        self.album?.albums?.removeAll()
+        self.album?.loadAlbums(urlString:  str   ,
+                                   success : { (data) in
+                                    DispatchQueue.main.async {
+                                        self.view?.reloadTableView()
+                                    }
+        },
+                                   failure: { (error) in
+                                    print(error.description)
+        })
+    }
     
     
     func numberOfSections() -> Int {
